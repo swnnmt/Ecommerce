@@ -1,38 +1,21 @@
-.App {
-  text-align: center;
+*{margin: 0; padding: 0;}
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+.text {
+  font-family: "Lato", sans-serif;
 }
+.headerWrapper .header{width: 100%; height: auto; padding: 15px 0px;}
+.logoWrapper img{ width: 120px; height: 50px;}
+.info {
+  margin-right: 25px; 
+}
+.headerWrapper .header .part2 .countryDrop{ width: 150px; height: 50px; min-width: 150px; color: black !important; border: 1.2px solid rgba(0,0,0,0.2) !important; border-radius: 7px !important;}
+.headerWrapper .header .part2 .countryDrop {text-align: left; justify-content: flex-start;}
+.headerWrapper .header .part2 .countryDrop .label{font-size: 11px !important; text-transform: capitalize !important; color: rgba(0,0,0,0.5) !important; line-height: 16px;}
+.headerWrapper .header .part2 .countryDrop .name{font-size: 14px !important; text-transform: capitalize !important; color: #233a95 !important; font-weight: 700;line-height: 16px;}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+header .haederSearch{width: 60%; height: 50px; background: #f3f4f7; padding: 10px; margin-left: 15px; border: 1px solid rgba(0,0,0,0.1); border-radius: 7px; position: relative;}
+header .haederSearch input {background: transparent !important; outline: none !important; font-size: 14px !important; color: rgba(0,0,0,0.8); width: 93%; height: 30px; border: 0 !important; padding: 0px 25px !important; }
+header .haederSearch  button{position: absolute; top:10px; right:15px; z-index: 100; min-width: 40px!important ; height: 40px!important ; width: 40px!important ; border-radius: 50%!important;}
+header .haederSearch  button svg{font-size: 25px;}
+header .part3 .user {align-items: center; justify-content: center; min-width: 40px; height: 40px; width: 40px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.2); margin-left: 12px;}
+header .part3 .user svg{font-size: 22px;}

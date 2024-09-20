@@ -1,14 +1,16 @@
 *{margin: 0px; padding: 0px;}
+
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 .text {
   font-family: "Lato", sans-serif;
 }
+
 .container {
-  max-width: 90%;
-  width: 100%;
+  max-width: 90% !important;
+  width: 100% !important;
 }
 
-.headerWrapper .header{width: 100%; height: auto; padding: 15px 0px;}
+.headerWrapper .header{width: 100%; height: auto; padding: 25px 0px;}
 .logoWrapper img{ width: 120px; height: 50px;}
 
 .headerWrapper .header .part2 .countryDrop{ width: 150px; height: 50px; min-width: 150px; color: black !important; border: 1.2px solid rgba(0,0,0,0.2) !important; border-radius: 7px !important;}
@@ -45,4 +47,47 @@ header .part3 .user svg{font-size: 22px;}
   width: 20px;
   height: 20px;
   border-radius: 50%;
+}
+nav .allCatTab{
+  background: #2bbef9;
+  padding: 8px 15px !important;
+  border-radius: 20px !important;
+}
+nav .allCatTab * {
+  color: #fff;
+}
+nav .allCatTab:hover{
+  background:#2bbef9 ;
+}
+nav .allCatTab .text{
+  font-weight: 600;
+}
+nav .allCatTab .icon1 svg{
+  font-size: 20px;
+}
+nav .allCatTab .icon1 svg{
+  font-size: 17px;
+}
+nav .navPart1{max-width: 20%;flex: 0 0 20%;}
+nav .navPart2 ul{
+  margin-bottom: 0px;
+}
+nav .navPart2 ul li a{ 
+ font-size: 16px;
+ font-weight: 600;
+ text-decoration: none;
+ color: rgba(0,0,0,0.6);
+ text-transform: uppercase;
+ display: flex;
+ align-items: center;
+ padding: 10px 20px;
+ transition: all 0.2s ease-in-out;
+ border-radius: 25px;
+}
+nav .navPart2 ul li a:hover{
+  background: #f0faff;
+  color: #2bbef9;
+}
+nav .navPart2 ul li a svg {
+ font-size: 18px;
 }

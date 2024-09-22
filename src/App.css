@@ -12,6 +12,10 @@
 
 .headerWrapper .header{width: 100%; height: auto; padding: 25px 0px;}
 .logoWrapper img{ width: 120px; height: 50px;}
+.headerWrapper {
+  border: 1px solid #dad6d6;
+  padding: 15px;
+}
 
 ::-webkit-scrollbar{width: 8px !important; height: 8px !important;}
 ::-webkit-scrollbar-thumb{background: #ccc !important;}
@@ -115,7 +119,7 @@ list-style: none;
   text-transform: capitalize !important;
   color: #000 !important;
   justify-content: flex-start !important;
-  padding: 15px 0px !important;
+  padding: 15px 10px !important;
 }
 .locationModal .close{
   position: absolute;

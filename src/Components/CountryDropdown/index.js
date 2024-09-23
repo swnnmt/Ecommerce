@@ -17,20 +17,21 @@ const CountryDropdown = () => {
     const [selectedTab, setSelectedTab] = useState(null);
     const [originalCountryList, setOriginalCountryList] = useState([]);
     const [countryList, setCountryList] = useState([]);
+    const [nowCountry, setNowCountry] = useState([]);
     const [keyword, setKeyword] = useState(""); // State cho keyword
 
     const context = useContext(MyContext);
 
-    const selectCountry = (index) => {
-        setSelectedTab(index);
-        console.log(context.countryList);
+    const selectCountry = (item) => {
+        console.log(item.country);
+        setNowCountry(item.country);
         setIsOpenModal(false);
         setKeyword("");
     };
 
     useEffect(() => {
         const countries = context.countryList;
-        // setCountryList(countries);
+        setCountryList(countries);
         setOriginalCountryList(countries); // Lưu danh sách quốc gia ban đầu
     }, [context.countryList]);
 
@@ -60,7 +61,8 @@ const CountryDropdown = () => {
             <Button className='countryDrop d-flex' onClick={handleOpenModal}>
                 <div className='info d-flex flex-column'>
                     <span className='label'>Your location</span>
-                    <span className='name'>VietNam</span>
+                    {/*  */}
+                    <span className='name'>{nowCountry}</span>
                 </div>
                 <span className='ms-auto p-2'><FaAngleDown /></span>
             </Button>
@@ -83,8 +85,7 @@ const CountryDropdown = () => {
                         countryList?.length !== 0 && countryList.map((item, index) => {
                             return (
                                 <li key={index}>
-                                    <Button onClick={() => selectCountry(index)}
-                                        className={`${selectedTab === index ? 'active' : ''}`}>
+                                    <Button onClick={() => selectCountry(item)}>
                                         {item.country}
                                     </Button>
                                 </li>

@@ -12,10 +12,6 @@
 
 .headerWrapper .header{width: 100%; height: auto; padding: 25px 0px;}
 .logoWrapper img{ width: 120px; height: 50px;}
-.headerWrapper {
-  border: 1px solid #dad6d6;
-  padding: 15px;
-}
 
 ::-webkit-scrollbar{width: 8px !important; height: 8px !important;}
 ::-webkit-scrollbar-thumb{background: #ccc !important;}
@@ -95,6 +91,25 @@ nav .navPart2 ul li a{
 nav .navPart2 ul li a:hover{
   background: #f0faff;
   color: #2bbef9;
+}
+nav .navPart2 ul li{
+  position: relative;
+}
+
+nav .navPart2 ul li .submenu{
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  min-width: 150px; 
+}
+nav .navPart2 ul li .submenu a{
+display: block;
+width: 100%;
+}
+nav .navPart2 ul li .submenu a span{
+  width: 100%;
+  justify-content: flex-start !important;
+  border-radius: 0px !important;
 }
 nav .navPart2 ul li a svg {
  font-size: 18px;

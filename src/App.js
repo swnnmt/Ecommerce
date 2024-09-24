@@ -10,6 +10,7 @@ const MyContext = createContext();
 function App() {
  
   const [countryList,setCountryList] = useState([]);
+  const [selectedCountry, setSelectedCountry] = useState("");
   //api countriesnow.space
   // useEffect(()=>{
   //   getCountry("http://countriesnow.space/api/v0.1/countries/");
@@ -27,7 +28,9 @@ function App() {
   }
 
   const values={
-      countryList
+      countryList,
+      selectedCountry,
+      setSelectedCountry
   }
 
   

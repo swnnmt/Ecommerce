@@ -14,19 +14,17 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 const CountryDropdown = () => {
     const [isOpenModal, setIsOpenModal] = useState(false);
-    const [selectedTab, setSelectedTab] = useState(null);
     const [originalCountryList, setOriginalCountryList] = useState([]);
     const [countryList, setCountryList] = useState([]);
-    const [nowCountry, setNowCountry] = useState([]);
+  
     const [keyword, setKeyword] = useState(""); // State cho keyword
 
     const context = useContext(MyContext);
 
     const selectCountry = (item) => {
         console.log(item.country);
-        setNowCountry(item.country);
         setIsOpenModal(false);
-        setKeyword("");
+        context.setSelectedCountry(item.country);
     };
 
     useEffect(() => {
@@ -62,7 +60,13 @@ const CountryDropdown = () => {
                 <div className='info d-flex flex-column'>
                     <span className='label'>Your location</span>
                     {/*  */}
-                    <span className='name'>{nowCountry}</span>
+                    <span className='name'>
+                    {context.selectedCountry 
+                        ? (context.selectedCountry.length > 10 
+                        ? context.selectedCountry.substr(0, 10) + "..." 
+                        : context.selectedCountry) 
+                        : 'Select Location'}
+                    </span>
                 </div>
                 <span className='ms-auto p-2'><FaAngleDown /></span>
             </Button>

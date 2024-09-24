@@ -14,9 +14,10 @@ const Navigation = () => {
                         <span className='icon2 ms-2'><FaAngleDown/></span>
                     </Button>
                 </div>
-                <div className='col-sm-9 navPart2 d-flex align-items-center'>
-                    <ul className='list list-inline ms-auto'>
-                        <li className='list-inline-item'><Link to={'/'}>Men <span className='icon2 ms-2'><FaAngleDown/></span> </Link>
+                <div className='col-sm-9 navPart2 d-flex'>
+                    <ul className='list list-inline me-auto'>
+                        <li className='list-inline-item'><Link to={'/'}>Home</Link> </li>
+                        <li className='list-inline-item'><Link to={'/'}>Men</Link>
                             <div className='submenu shadow'>
                                 <Link to="/"><span>clothing</span></Link>
                                 <Link to="/"><span>clothing</span></Link>
@@ -24,11 +25,44 @@ const Navigation = () => {
                                 <Link to="/"><span>clothing</span></Link>
                             </div>
                         </li>
-                        <li className='list-inline-item'><Link to={'/'}>Fashion <span className='icon2 ms-2'><FaAngleDown/></span></Link></li>
-                        <li className='list-inline-item'><Link to={'/'}>Electronic</Link></li>
-                        <li className='list-inline-item'><Link to={'/'}>Bakery</Link></li>
-                        <li className='list-inline-item'><Link to={'/'}>Grocery</Link></li>
-                        <li className='list-inline-item'><Link to={'/'}>Food</Link></li>
+                        <li className='list-inline-item'><Link to={'/'}>Fashion </Link>
+                        <div className='submenu shadow'>
+                                <Link to="/"><span>clothing</span></Link>
+                                <Link to="/"><span>clothing</span></Link>
+                                <Link to="/"><span>clothing</span></Link>
+                                <Link to="/"><span>clothing</span></Link>
+                            </div>
+                        </li>
+                        <li className='list-inline-item'><Link to={'/'}>Electronic</Link>
+                        <div className='submenu shadow'>
+                                <Link to="/"><span>clothing</span></Link>
+                                <Link to="/"><span>clothing</span></Link>
+                                <Link to="/"><span>clothing</span></Link>
+                                <Link to="/"><span>clothing</span></Link>
+                            </div>
+                        </li>
+                        <li className='list-inline-item'><Link to={'/'}>Bakery</Link>
+                        <div className='submenu shadow'>
+                                <Link to="/"><span>clothing</span></Link>
+                                <Link to="/"><span>clothing</span></Link>
+                                <Link to="/"><span>clothing</span></Link>
+                                <Link to="/"><span>clothing</span></Link>
+                            </div>
+                        </li>
+                        <li className='list-inline-item'><Link to={'/'}>Grocery</Link><div className='submenu shadow'>
+                                <Link to="/"><span>clothing</span></Link>
+                                <Link to="/"><span>clothing</span></Link>
+                                <Link to="/"><span>clothing</span></Link>
+                                <Link to="/"><span>clothing</span></Link>
+                            </div>
+                        </li>
+                        <li className='list-inline-item'><Link to={'/'}>Food</Link><div className='submenu shadow'>
+                                <Link to="/"><span>clothing</span></Link>
+                                <Link to="/"><span>clothing</span></Link>
+                                <Link to="/"><span>clothing</span></Link>
+                                <Link to="/"><span>clothing</span></Link>
+                            </div>
+                        </li>
                         <li className='list-inline-item'><Link to={'/'}>Blog</Link></li>
                         <li className='list-inline-item'><Link to={'/'}>Contac us</Link></li> 
                     </ul>

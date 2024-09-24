@@ -2,17 +2,31 @@ import Button from '@mui/material/Button';
 import { IoIosMenu } from 'react-icons/io';
 import { FaAngleDown } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const Navigation = () => {
+
+    const[isOpenSidebarVal, setIsOpenSidebarVal] = useState(false);
+
     return (   <nav className='d-flex'>
-        <div className='container'>
+        <div className='navMain container'>
             <div className='row'>
                 <div className='col-sm-3 navPart1'>
-                    <Button className='allCatTab align-items-center'>
-                        <span className='icon1 me-2'><IoIosMenu/></span>
-                        <span className='text'>All CATEGORIES</span>
-                        <span className='icon2 ms-2'><FaAngleDown/></span>
-                    </Button>
+                    <div className='catWrapper' >
+                        <Button className='allCatTab align-items-center' onClick={()=>setIsOpenSidebarVal(!isOpenSidebarVal)}>
+                            <span className='icon1 me-2'><IoIosMenu/></span>
+                            <span className='text'>All CATEGORIES</span>
+                            <span className='icon2 ms-2'><FaAngleDown/></span>
+                        </Button>
+                        <div className={`sidebarNav ${isOpenSidebarVal=== true ? 'open':''}`}>
+                               <ul>
+                               <li className='list-inline-item'><Link to={'/'}>Home</Link> </li>
+                               <li className='list-inline-item'><Link to={'/'}>Men</Link> </li>
+                               <li className='list-inline-item'><Link to={'/'}>Women</Link> </li>
+                               <li className='list-inline-item'><Link to={'/'}>Kid</Link> </li>
+                               </ul>
+                        </div>
+                    </div>
                 </div>
                 <div className='col-sm-9 navPart2 d-flex'>
                     <ul className='list list-inline me-auto'>

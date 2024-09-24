@@ -4,10 +4,15 @@
 .text {
   font-family: "Lato", sans-serif;
 }
-
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css');
 .container {
   max-width: 90% !important;
   width: 100% !important;
+}
+a {
+  text-decoration: none !important;
+
 }
 
 .headerWrapper .header{width: 100%; height: auto; padding: 25px 0px;}
@@ -52,6 +57,9 @@ header .part3 .user svg{font-size: 22px;}
   height: 20px;
   border-radius: 50%;
 }
+.navMain{
+  margin-bottom: 25px;
+}
 nav .allCatTab{
   background: #2bbef9;
   padding: 8px 15px !important;
@@ -72,13 +80,62 @@ nav .allCatTab .icon1 svg{
 nav .allCatTab .icon1 svg{
   font-size: 17px;
 }
-nav .navPart1{max-width: 20%;flex: 0 0 20%;}
+nav .navPart1{
+  max-width: 20%;
+  flex: 0 0 20%;
+}
 nav .navPart2{
-  justify-content: flex-end;
+  max-width: 80%;
+  flex: 0 0 80%;
+}
+nav .navPart1 .catWrapper {
+  position: relative;
+}
+nav .navPart1 .catWrapper .sidebarNav{
+  margin-top: 20px;
+  width: 250px;
+  height: 0px;
+  opacity: 0;
+  background: #fff;
+  position:absolute;
+  top: 100%;
+  border: 1px solid rgba(0,0,0,0.1);
+  transition: all 0.2s;
+  visibility: hidden;
+  z-index: 100;
+}
+nav .navPart1 .catWrapper .sidebarNav.open {
+  height: auto;
+  opacity: 1;
+  visibility: inherit;
+}
+nav .navPart1 .catWrapper .sidebarNav ul{
+  padding-left: 7px !important;
+}
+nav .navPart1 .catWrapper .sidebarNav ul li {
+  width: 100% ;
+  list-style: none;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  margin-right: 10px;
+}
+nav .navPart1 .catWrapper .sidebarNav ul li a{
+  font-weight: 600;
+  color: #000 !important;
+  width: 100%;
+  text-align: left;  /* Căn lề trái */
+  display: block;
+  text-transform: uppercase;
+  padding: 5px 5px;
+  border-radius: 12px;
+}
+nav .navPart1 .catWrapper .sidebarNav ul li a:hover{
+  background: #f0faff;
+  color: #2bbef9 !important;
 }
 nav .navPart2 ul{
   margin-bottom: 0px;
-  justify-content: flex-end !important;
 }
 nav .navPart2 ul li a{ 
  font-size: 16px;
@@ -99,6 +156,7 @@ nav .navPart2 ul li a:hover{
 nav .navPart2 ul li{
   position: relative;
 }
+
 nav .navPart2 ul li .submenu{
   position: absolute;
   top: 100%;
@@ -108,6 +166,7 @@ nav .navPart2 ul li .submenu{
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease-in-out;
+  z-index: 100;
 }
 nav .navPart2 ul li:hover .submenu{
   opacity: 1;
@@ -118,12 +177,13 @@ nav .navPart2 ul li .submenu a{
 display: block;
 width: 100%;
 }
-nav .navPart2 ul li .submenu a{
+nav .navPart2 ul li .submenu a span{
   width: 100%;
   justify-content: flex-start !important;
   border-radius: 0px !important;
   text-transform: capitalize !important;
-  font-weight: 600 !important;
+  font-weight: 600px !important;
+
 }
 nav .navPart2 ul li a svg {
  font-size: 18px;
@@ -163,4 +223,29 @@ list-style: none;
 }
 .locationModal .close svg{ 
 font-size: 22px;
+}
+.HomeBannerSection{
+  position: relative;
+  overflow: hidden;
+}
+.HomeBannerSection .slick-arrow{
+  position: absolute; 
+  top: 45%;
+  z-index: 100;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  width: 40px !important;
+  height: 40px !important;
+  background: #565454;
+  border-radius: 100%;
+}
+.HomeBannerSection .slick-arrow.slick-next{
+ right: 25px !important;
+}
+.HomeBannerSection .slick-arrow.slick-prev{
+  left: 25px !important;
+ }
+.HomeBannerSection *{
+  outline: none;
 }

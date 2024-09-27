@@ -3,6 +3,7 @@ import { IoIosMenu } from 'react-icons/io';
 import { FaAngleDown } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import { FaAngleRight } from "react-icons/fa6";
 
 const Navigation = () => {
 
@@ -20,10 +21,34 @@ const Navigation = () => {
                         </Button>
                         <div className={`sidebarNav ${isOpenSidebarVal=== true ? 'open':''}`}>
                                <ul>
-                               <li className='list-inline-item'><Link to={'/'}>Home</Link> </li>
-                               <li className='list-inline-item'><Link to={'/'}>Men</Link> </li>
-                               <li className='list-inline-item'><Link to={'/'}>Women</Link> </li>
-                               <li className='list-inline-item'><Link to={'/'}>Kid</Link> </li>
+                               <li className='list-inline-item d-flex'><Link to={'/'}> <div className='d-flex'>Home <FaAngleRight className='ms-auto'/></div> </Link> 
+                                    <div className='submenu'>
+                                    <Link to="/"><span>clothing</span></Link>
+                                    <Link to="/"><span>clothing</span></Link>
+                                    <Link to="/"><span>clothing</span></Link>
+                                    <Link to="/"><span>clothing</span></Link>
+                                    </div>
+                               
+                               </li>
+                               <li className='list-inline-item d-flex'><Link to={'/'}> <div className='d-flex'>Men <FaAngleRight className='ms-auto'/></div> </Link> 
+                                    <div className='submenu'>
+                                    <Link to="/"><span>clothing</span></Link>
+                                    <Link to="/"><span>clothing</span></Link>
+                                    <Link to="/"><span>clothing</span></Link>
+                                    <Link to="/"><span>clothing</span></Link>
+                                    </div>
+                               
+                               </li>
+                               <li className='list-inline-item d-flex'><Link to={'/'}> <div className='d-flex'>Women <FaAngleRight className='ms-auto'/></div> </Link> 
+                                    <div className='submenu'>
+                                    <Link to="/"><span>clothing</span></Link>
+                                    <Link to="/"><span>clothing</span></Link>
+                                    <Link to="/"><span>clothing</span></Link>
+                                    <Link to="/"><span>clothing</span></Link>
+                                    </div>
+                               
+                               </li>
+                               <li className='list-inline-item'><Link to={'/'}><div>Kid</div></Link> </li>
                                </ul>
                         </div>
                     </div>

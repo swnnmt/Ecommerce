@@ -1,11 +1,14 @@
 import HomeBanner from "../../Components/HomeBanner";
+import banner1 from '../../assest/img/banner1.jpg';
+import banner2 from '../../assest/img/banner2.jpg';
 import Button from '@mui/material/Button';
 import { IoIosArrowRoundForward } from "react-icons/io";
 import React from "react";
 import Slider from "react-slick";
-import Rating from '@mui/material/Rating';
-import { TfiFullscreen } from "react-icons/tfi";
 import ProductItems from "../../Components/ProductItems";
+import HomeCat from "../../Components/HomeCat";
+import banner5 from '../../assest/img/banner5.jpg';
+import banner6 from '../../assest/img/banner6.jpg';
 const Home = () => {
     var productSliderOptions = {
         dots: true,
@@ -17,13 +20,21 @@ const Home = () => {
     return ( 
         <>
             <HomeBanner/>
+
+            <HomeCat/>
+
             <section className="homeProducts"> 
                 <div className="container">
                     <div className="row">
                         <div className="col-md-3">
+                        <div className="sticky">
                            <div className="banner">
-                                <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/banner-box.jpg" alt="img" className="cursor"/>    
+                                <img src={banner1} alt="img" className="cursor"/>    
                            </div>
+                           <div className="banner mt-5">
+                                <img src={banner2} alt="img" className="cursor"/>    
+                           </div>
+                        </div>
                         </div>
                         <div className="col-md-9 productRow">
                         {/* Product start */}
@@ -101,15 +112,27 @@ const Home = () => {
                                 <Button className="viewAllBtn ms-auto">View all<IoIosArrowRoundForward/></Button>
 
                             </div>
-                            <div className="product_row w-100 mt-4">
-                            <Slider {...productSliderOptions}>
+                            <div className="product_row productRow2 w-100 mt-4 d-flex">
                                <ProductItems/>
                                <ProductItems/>
                                <ProductItems/>
                                <ProductItems/>
-                            </Slider>
+                               <ProductItems/>
+                               <ProductItems/>
+                               <ProductItems/>
+                               <ProductItems/>
                             </div>
                  {/* New product  end*/}
+                            <div className="d-flex mt-4 mb-5 bannerSec">
+                                <div className="banner">
+                                    <img src={banner5} alt="img" className="cursor w-100"/>    
+                                </div>
+                                <div className="banner">
+                                    <img src={banner6} alt="img" className="cursor w-100"/>    
+                                </div>
+                            </div>
+                            
+
                         </div>
                        
                     </div>

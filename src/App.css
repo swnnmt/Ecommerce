@@ -10,6 +10,9 @@
   max-width: 90% !important;
   width: 100% !important;
 }
+body{
+  overflow-x: hidden;
+}
 a {
   text-decoration: none !important;
 
@@ -381,9 +384,9 @@ body .text-light {
   border: 1px solid rgba(0,0,0,0.1);
   position: relative;
 }
-.slick-track{
+/* .slick-track{
   transform: translate3d(0px, 0px, 0px) !important;
-}
+} */
 .productItem .info{
   padding: 15px;
 }
@@ -461,4 +464,54 @@ body .text-light {
   opacity: 1;
   right: 10px;
   z-index: 1000;
+}
+.itemPrd{
+  padding-bottom: 10px;
+  width: 100%;
+  height: auto;
+  border-radius: 10%;
+}
+
+.slider-spacing .slick-slide {
+  padding:20px 0 ;
+  padding-right: 8px; /* Hoặc margin-right */
+}
+.hd{
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.homeCat .slick-arrow{
+  position: absolute; 
+  top: 45%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px !important;
+  height: 30px !important;
+  background: #f9c90c;
+  border-radius: 100%;
+  top: -15px !important;
+}
+.homeCat .slick-arrow.slick-prev{
+  right: 50px !important;
+  left: inherit !important;
+}
+.productRow2{
+  flex-wrap: wrap;
+}
+.productRow2 .productItem{
+  width: 25%;
+  overflow: hidden;
+  border-right: 1px solid rgba(0,0,0,0.1) !important;
+}
+.bannerSec{
+  gap:15px;
+}
+.sticky{
+  position: sticky;
+  top: 10px;
+  z-index: 100;
 }

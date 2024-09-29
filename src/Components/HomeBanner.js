@@ -23,7 +23,7 @@ const HomeBanner = () => {
                 <img className="banner_img" src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/slider-image-1.jpg" alt="img w-100"  ></img>
             </div>
             <div className="item ">
-                <img className="banner_img" src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/slider-image-2.jpg" alt="img w-100" ></img>
+                <img className="banner_img" src="https://klbtheme.com/bacola/wp-content/uploads/2021/05/slider-3.jpg" alt="img w-100" ></img>
             </div>
             
         </Slider>

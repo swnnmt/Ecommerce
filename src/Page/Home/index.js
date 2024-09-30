@@ -9,6 +9,8 @@ import ProductItems from "../../Components/ProductItems";
 import HomeCat from "../../Components/HomeCat";
 import banner5 from '../../assest/img/banner5.jpg';
 import banner6 from '../../assest/img/banner6.jpg';
+import newsLetterimg from '../../assest/img/newLetter.webp';
+import { MdOutlineEmail } from "react-icons/md";
 const Home = () => {
     var productSliderOptions = {
         dots: true,
@@ -54,51 +56,6 @@ const Home = () => {
                                <ProductItems/>
                                <ProductItems/>
                                <ProductItems/>
-                                {/* <div className="item productItem">
-                                    <div className="imgWrapper">
-                                        <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-62-346x310.jpg" alt="img" className="w-100" />
-                                        <span className="badge badge-primary">28%</span>
-                                    </div>
-                                    <div className="info">
-                                        <h4>All Natural Italian-Style Chicken Meatballs</h4>
-                                        <span className="text-success d-block">In Stock</span>
-                                        <Rating className="mt-2 mb-2" name="read-only" value={5} readOnly size="small" precision={0.5} />
-                                        <div className="d-flex">
-                                            <span className="oldPrice">$20.00</span>
-                                            <span className="salePrice text-danger ms-3">$14.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="item productItem">
-                                    <div className="imgWrapper">
-                                        <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-62-346x310.jpg" alt="img" className="w-100" />
-                                        <span className="badge badge-primary">28%</span>
-                                    </div>
-                                    <div className="info">
-                                        <h4>All Natural Italian-Style Chicken Meatballs</h4>
-                                        <span className="text-success d-block">In Stock</span>
-                                        <Rating className="mt-2 mb-2" name="read-only" value={5} readOnly size="small" precision={0.5} />
-                                        <div className="d-flex">
-                                            <span className="oldPrice">$20.00</span>
-                                            <span className="salePrice text-danger ms-3">$14.00</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="item productItem">
-                                    <div className="imgWrapper">
-                                        <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-62-346x310.jpg" alt="img" className="w-100" />
-                                        <span className="badge badge-primary">28%</span>
-                                    </div>
-                                    <div className="info">
-                                        <h4>All Natural Italian-Style Chicken Meatballs</h4>
-                                        <span className="text-success d-block">In Stock</span>
-                                        <Rating className="mt-2 mb-2" name="read-only" value={5} readOnly size="small" precision={0.5} />
-                                        <div className="d-flex">
-                                            <span className="oldPrice">$20.00</span>
-                                            <span className="salePrice text-danger ms-3">$14.00</span>
-                                        </div>
-                                    </div>
-                                </div> */}
                             </Slider>
                             </div>
                  {/* Product end */}
@@ -137,6 +94,29 @@ const Home = () => {
                        
                     </div>
                 </div>
+            </section>
+
+            <section className="newsLetterSection mt-3 mb -3 d-flex align-items-center">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-6">
+                                <p className="text-white mb-1">$20 discount for your first order</p>
+                                <h3 className="text-white">Join our newsletter and get...</h3>
+                                <p className="text-light">Join our email subscription now to get updates on promotions and coupons.</p>
+
+                                <form>
+                                    <MdOutlineEmail />
+                                    <input type="text" placeholder="Your email address"/>
+                                    <Button>Subscribe</Button>
+                                </form>
+
+                            </div>
+                            <div className="col-md-6">
+                                <img src={newsLetterimg}/>
+                            </div>
+                            
+                        </div>
+                    </div>
             </section>
         </>
      );

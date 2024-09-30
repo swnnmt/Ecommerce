@@ -25,7 +25,7 @@ const HomeCat = () => {
         infinite: false,
         speed: 500,
         slidesToShow: 10,
-        slidesToScroll: 1,
+        slidesToScroll: 4,
         arrows: true
     };
 

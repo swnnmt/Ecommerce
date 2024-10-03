@@ -16,19 +16,22 @@ const HomeBanner = () => {
 
 
     return ( 
-        <div className="HomeBannerSection">
+        <div className="container mt-3">
+            <div className="HomeBannerSection">
                
-        <Slider {...settings}>
-            <div className="item">
-                <img className="banner_img" src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/slider-image-1.jpg" alt="img w-100"  ></img>
-            </div>
-            <div className="item ">
-                <img className="banner_img" src="https://klbtheme.com/bacola/wp-content/uploads/2021/05/slider-3.jpg" alt="img w-100" ></img>
-            </div>
-            
-        </Slider>
-
-            </div>
+               <Slider {...settings}>
+                   <div className="item">
+                       <img className="banner_img" src="https://klbtheme.com/bacola/wp-content/uploads/2021/05/slider-image-6.jpg" alt="img w-100"  ></img>
+                   </div>
+                   <div className="item ">
+                       <img className="banner_img" src="https://klbtheme.com/bacola/wp-content/uploads/2021/05/slider-image-7.jpg" alt="img w-100" ></img>
+                   </div>
+                   
+               </Slider>
+       
+                   </div>
+        </div>
+        
      );
 }
  

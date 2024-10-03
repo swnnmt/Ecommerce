@@ -2,14 +2,24 @@ import Button from '@mui/material/Button';
 import Rating from '@mui/material/Rating';
 import { TfiFullscreen } from "react-icons/tfi";
 import { IoMdHeartEmpty } from 'react-icons/io';
+import ProductModal from './ProductModal';
+import { useContext, useState } from 'react';
+import { MyContext } from '../App';
 const ProductItems = () => {
+   
+    const context = useContext(MyContext)
+
+    const viewProductDetail=(id)=>{
+        context.setIsOpenProductModal(true);
+    }
     return ( 
+     <>
         <div className="item productItem">
         <div className="imgWrapper">
-            <img src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-62-346x310.jpg" alt="img" className="w-100" />
+            <img onClick={()=>viewProductDetail(1)} src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-62-346x310.jpg" alt="img" className="w-100" />
             <span className=" sale badge badge-primary">28%</span>
             <div className="actions">
-                <Button><TfiFullscreen/></Button>
+                <Button onClick={()=>viewProductDetail(1)} ><TfiFullscreen/></Button>
                 <Button><IoMdHeartEmpty/></Button>
             </div>
         </div>
@@ -23,6 +33,9 @@ const ProductItems = () => {
             </div>
         </div>
     </div>
+       
+      
+     </>
      );
 }
  

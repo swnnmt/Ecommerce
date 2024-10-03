@@ -314,10 +314,11 @@ list-style: none;
 font-size: 22px;
 }
 .HomeBannerSection{
-  margin-left: 30%;
-  width: 55%;
   position: relative;
   overflow: hidden;
+}
+.HomeBannerSection .swiper{
+  overflow: inherit !important;
 }
 .HomeBannerSection .slick-arrow{
   position: absolute; 
@@ -340,10 +341,19 @@ font-size: 22px;
 .HomeBannerSection *{
   outline: none;
 }
-/* .banner_img {
+.banner_img {
+
   width: 100%;
-  height: 550px;
-} */
+  height: 400px;
+}
+.badge{
+  display: inline-block;
+  padding: 7px 10px;
+}
+.badge.bg-success{
+  background: #e5f8ed !important;
+  color: #16bb85 !important;
+}
 .cursor{
   cursor: pointer;
 }
@@ -395,17 +405,17 @@ body .text-light {
   font-size: 16px;
   font-weight: 600;
 }
-.productItem .info .oldPrice{
+.info .oldPrice{
   font-size: 16px;
   font-weight: bold;
   color: rgba(0,0,0,0.3);
   text-decoration: line-through;
 }
-.productItem .info .salePrice{
+.info .salePrice{
   font-size: 16px;
   font-weight: bold;;
 }
-.imgWrapper .sale{
+.sale{
   background: #4161e0 !important;
 }
 .productItem .badge{
@@ -658,4 +668,119 @@ footer .copyright ul li a:hover{
 }
 footer .copyright ul li a:hover svg{
   color: #fff;
+}
+.productModal .MuiPaper-elevation{
+  position: relative;
+  padding: 25px;
+  max-width: 1000px;
+  width: 900px;
+}
+.productModal .close{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #000 !important;
+  min-width: 40px !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50px !important;
+
+}
+.productModal .close svg{ 
+font-size: 22px;
+}
+.productModal h4{
+  font-size: 22px !important;
+  color: rgba(0,0,0,0.8) !important;
+}
+.productZoom{
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 0px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+.zoomSliderBig{
+  width: 100% !important;
+}
+.zoomSlider{
+  width: 300px;
+  height: auto;
+  padding-top: 30px !important;
+}
+.zoomSlider .slick-slide{
+  padding-right: 20px !important;
+}
+.zoomSlider *{
+  outline: none !important;
+}
+.zoomSlider .item{
+  border: 2px solid  transparent !important;
+  overflow: hidden !important;
+  border-radius: 15px !important;
+  cursor: pointer;
+}
+.zoomSlider .slick-current .item {
+  border: 2px solid #3bb77e !important;
+}
+.zoomSlider .slick-arrow{
+  top:55% !important;
+  zoom: 80% !important;
+} 
+.zoomSlider .slick-arrow.slick-next{right: -2% !important;}
+.zoomSlider .slick-arrow.slick-prev{left: -5% !important;}
+.btn-blue{
+  background: #233a95 !important;
+  color: #fff !important;
+  text-transform: capitalize !important;
+}
+.btn-big{
+  font-size: 17px !important;
+  padding: 15px 30px;
+}
+.btn-round{
+  border-radius: 30px !important;
+}
+.btn-sml{
+  font-size: 13px !important;
+  color: #000;
+  text-transform: capitalize !important;
+}
+.btn-sml svg{
+  font-size: 20px;
+}
+.quantityDrop{
+  width: 150px;
+  gap: 20 !important;
+}
+.quantityDrop button{
+  min-width: 40px !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  color: #edeef5 !important;
+  border: 1px solid rgba(0,0,0,0.1) !important;
+}
+.quantityDrop svg{
+  color: #000 !important;
+}
+.quantityDrop input{
+  width: 30px;
+  border: 0px;
+  background: transparent !important;
+  outline: none !important;
+}
+.productModal .actions button{
+  color: #000 !important;
+  border: 1px solid rgba(0,0,0,0.2) !important;
+}
+.productModal .actions button svg{
+  font-size: 15px !important;
+}
+.productZoom .badge{
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+  position: absolute !important;
 }

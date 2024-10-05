@@ -7,6 +7,7 @@ import { createContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import ProductModal from '../src/Components/ProductModal';
 import Footer from "./Components/Footer";
+import Listing from './Page/Listing';
 const MyContext = createContext();
 function App() {
   const [isOpenProductModal, setIsOpenProductModal]= useState(false);
@@ -43,7 +44,8 @@ function App() {
     <Header/>
       <Routes>
           <Route path="/" exact={true} element={<Home/>}/>
-      </Routes>
+          <Route path="/cat/:id" exact={true} element={<Listing/>}/>
+     </Routes>
     <Footer/>
         {
             isOpenProductModal ===true && <ProductModal/>

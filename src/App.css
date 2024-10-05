@@ -165,7 +165,7 @@ nav .navPart1 .catWrapper .sidebarNav{
   border: 1px solid rgba(0,0,0,0.1);
   transition: all 0.2s;
   visibility: hidden;
-  z-index: 100;
+  z-index: 1000;
 }
 nav .navPart1 .catWrapper .sidebarNav.open {
   height: auto;
@@ -783,4 +783,67 @@ font-size: 22px;
   left: 20px;
   z-index: 100;
   position: absolute !important;
+}
+.product_Listing_Page{
+  padding: 35px 0px;
+}
+.product_Listing_Page .productListing{
+  gap: 20px;
+}
+.product_Listing_Page .productListing .sidebar{
+  width: 20%;
+  flex: 0 0 20%;
+}
+.product_Listing_Page .productListing .sidebar .filterBox{
+  margin-bottom: 15px;
+}
+.product_Listing_Page .productListing .sidebar .filterBox h6{
+font-weight: 700;
+margin-bottom: 15px;
+}
+.product_Listing_Page .productListing .sidebar .scroll{
+  padding-left: 5px;
+  max-height:  180px !important;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.product_Listing_Page .productListing .sidebar .scroll::-webkit-scrollbar{
+  width: 5px !important;
+  height: 5px !important;
+}
+.product_Listing_Page .productListing .sidebar .scroll ul li {
+  list-style: none;
+  margin-bottom: 0px;
+  width: 100%;
+ }
+ .product_Listing_Page .productListing .sidebar .scroll ul{
+  padding: 0;
+ }
+ .css-j204z7-MuiFormControlLabel-root{
+  padding: 2px !important;
+ }
+.product_Listing_Page .productListing .content_right{
+  width: 80%;
+  flex: 0 0 80%;
+  padding-left: 50px;
+}
+.css-j204z7-MuiFormControlLabel-root .MuiFormControlLabel-label{
+font-size: 13px;
+}
+.css-20bmp1-MuiSvgIcon-root{
+  width: 20px !important;
+  height: 20px !important;
+}
+.range-slider{
+  height: 5px !important;
+}
+.range-slider .range-slider__range , .range-slider .range-slider__thumb{
+  background-color: #000 !important;
+}
+.range-slider .range-slider__range{
+  height: 60% !important;
+}
+.range-slider .range-slider__thumb{
+  width: 12px !important;
+  height: 12px !important;
 }

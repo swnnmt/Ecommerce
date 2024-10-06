@@ -2,10 +2,10 @@ import Button from '@mui/material/Button';
 import Rating from '@mui/material/Rating';
 import { TfiFullscreen } from "react-icons/tfi";
 import { IoMdHeartEmpty } from 'react-icons/io';
-import ProductModal from './ProductModal';
-import { useContext, useState } from 'react';
+
+import { useContext} from 'react';
 import { MyContext } from '../App';
-const ProductItems = () => {
+const ProductItems = (props) => {
    
     const context = useContext(MyContext)
 
@@ -14,7 +14,7 @@ const ProductItems = () => {
     }
     return ( 
      <>
-        <div className="item productItem">
+        <div className={`productItem ${props.itemView}`}>
         <div className="imgWrapper">
             <img onClick={()=>viewProductDetail(1)} src="https://klbtheme.com/bacola/wp-content/uploads/2021/04/product-image-62-346x310.jpg" alt="img" className="w-100" />
             <span className=" sale badge badge-primary">28%</span>

@@ -429,12 +429,12 @@ body .text-light {
 .productItem .actions{
   position: absolute;
   top: 10px;
-  right: -20%;
-
+  right: 0px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  visibility: hidden;
 }
 .productItem .actions button {
   display: flex;
@@ -463,6 +463,7 @@ body .text-light {
 }
 .productItem .imgWrapper{
   overflow: hidden;
+  position: relative;
 }
 .productItem .imgWrapper img{
   transition: all 0.3s ease-in-out;
@@ -470,10 +471,12 @@ body .text-light {
 .productItem .imgWrapper:hover img{
   transform: scale(1.1);
 }
+
 .productItem .imgWrapper:hover .actions{
   opacity: 1;
   right: 10px;
   z-index: 1000;
+  visibility: inherit;
 }
 .itemPrd{
   padding-bottom: 10px;
@@ -794,6 +797,11 @@ font-size: 22px;
   width: 20%;
   flex: 0 0 20%;
 }
+
+/* .product_Listing_Page .productListing .sidebar .sticky{
+  position: sticky;
+  top: 20px;
+} */
 .product_Listing_Page .productListing .sidebar .filterBox{
   margin-bottom: 15px;
 }
@@ -823,8 +831,8 @@ margin-bottom: 15px;
   padding: 2px !important;
  }
 .product_Listing_Page .productListing .content_right{
-  width: 80%;
-  flex: 0 0 80%;
+  width: 78%;
+  flex: 0 0 78%;
   padding-left: 50px;
 }
 .css-j204z7-MuiFormControlLabel-root .MuiFormControlLabel-label{
@@ -847,3 +855,57 @@ font-size: 13px;
   width: 12px !important;
   height: 12px !important;
 }
+.product_Listing_Page .productListing .content_right .showBy {
+  width: 100%;
+  height: 50px;
+  background: #f7f8fd;
+}
+.product_Listing_Page .productListing .content_right .showBy .btnWrapper button{
+  min-width: 35px !important;
+  height: 35px !important;
+  width: 35px !important;
+  border-radius: 50% !important;
+}
+.product_Listing_Page .productListing .content_right .showBy .btnWrapper button.act svg{
+ opacity: 1 !important;
+}
+.product_Listing_Page .productListing .content_right .showBy .btnWrapper button svg{
+  color: #000;
+  font-size: 20px !important;
+  opacity: 0.3;
+}
+.product_Listing_Page .productListing .content_right .showBy .btnWrapper button:hover svg{
+  opacity: 1.2;
+}
+.showByFilter button{
+  min-width: auto !important;
+  color: #000;
+}
+.showByFilter button svg{
+  color: #000;
+  opacity: 0.6;
+  margin-left: 5px !important;
+}
+.showPerPageDropdown .MuiPaper-root{
+  width:80px!important;
+}
+.productListing{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.productListing .productItem.four{
+  width: 23.5% !important;
+}
+.productListing .productItem.three{
+  width: 32% !important;
+}
+.productListing .productItem.two{
+  width: 48% !important;
+}
+.productListing .productItem.one{
+  width: 100% !important;
+  display: flex;
+  align-items: center;
+}
+.productListing .productItem.one .imgWrapper{width: 30%;}

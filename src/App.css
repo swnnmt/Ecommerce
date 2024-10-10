@@ -699,7 +699,6 @@ font-size: 22px;
 .productZoom{
   width: 100%;
   height: auto;
-  border: 1px solid rgba(0,0,0,0.1);
   padding: 0px;
   overflow: hidden;
   border-radius: 15px;
@@ -909,3 +908,17 @@ font-size: 13px;
   align-items: center;
 }
 .productListing .productItem.one .imgWrapper{width: 30%;}
+.section{
+  padding: 45px 0px;
+}
+
+.productDetails .hd{font-size: 35px;}
+.productDetails .oldPrice{
+  font-size: 20px;
+}
+.productDetails .salePrice{
+  font-size: 23px;
+}
+.productDetails .badge{
+  border-radius: 20px !important;
+}

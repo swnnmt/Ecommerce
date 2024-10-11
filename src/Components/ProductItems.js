@@ -5,6 +5,7 @@ import { IoMdHeartEmpty } from 'react-icons/io';
 
 import { useContext} from 'react';
 import { MyContext } from '../App';
+import { Link } from 'react-router-dom';
 const ProductItems = (props) => {
    
     const context = useContext(MyContext)
@@ -24,7 +25,7 @@ const ProductItems = (props) => {
             </div>
         </div>
         <div className="info">
-            <h4>All Natural Italian-Style Chicken Meatballs</h4>
+            <h4><Link to={'/product/1'} style={{ color: 'black', textDecoration: 'none' }}>All Natural Italian-Style Chicken Meatballs</Link></h4>
             <span className="text-success d-block">In Stock</span>
             <Rating className="mt-2 mb-2" name="read-only" value={5} readOnly size="small" precision={0.5} />
             <div className="d-flex">

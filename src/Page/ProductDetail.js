@@ -7,6 +7,11 @@ import { BsCartFill } from "react-icons/bs";
 import { IoIosHeartEmpty } from "react-icons/io";
 import { MdCompareArrows } from "react-icons/md";
 import ProductRelated from '../Components/ProductRelated';
+import Paper from '@mui/material/Paper';
+import * as React from 'react';
+import Avatar from '@mui/material/Avatar';
+import Stack from '@mui/material/Stack';
+
 const ProductDetails = () => {
     const [Value, setValue] = useState(2);// star rate
     const [activeTabs, setActiveTabs] = useState(0);// star rate
@@ -154,9 +159,12 @@ const ProductDetails = () => {
                                 <div className='col-md-8'>
                                     <h3>Customer questions & answers</h3>
                                     <br />
+                                <Paper elevation={3}>
                                 <div className='card p-4 reviewsCard flex-row'>
                                     <div className='rounded-circle'>
-                                        <img src='https://secure.gravatar.com/avatar/dd28514c9a8cfba334e05f21703be28e?s=60&d=mm&r=g' />
+                                    <Stack direction="row" spacing={2}>
+                                        <Avatar alt="admin" src="https://secure.gravatar.com/avatar/dd28514c9a8cfba334e05f21703be28e?s=60&d=mm&r=g" />
+                                    </Stack>
                                         <span className='text-g d-block text-center font-weight-bold mt-2'>admin</span>
                                     </div>
                                     
@@ -168,6 +176,7 @@ const ProductDetails = () => {
                                         <p>item review</p>
                                     </div>
                                 </div>
+                                </Paper>
 
                                     <form className='reviewForm mt-5'>
                                         <b4>Add a review</b4>
@@ -263,9 +272,8 @@ const ProductDetails = () => {
                     </div>
 
 {/* Product Related */}
-                    <div className='mt-5'>
+                   
                     <ProductRelated />
-                    </div>
                     
                 </div>
                

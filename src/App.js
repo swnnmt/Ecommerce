@@ -10,6 +10,8 @@ import Footer from "./Components/Footer";
 import Listing from './Page/Listing';
 import ProductDetails from './Page/ProductDetail';
 import Cart from './Page/Cart';
+import SignIn from './Page/SignIn';
+import SignUp from './Page/SignUp';
 const MyContext = createContext();
 function App() {
   const [isOpenProductModal, setIsOpenProductModal]= useState(false);
@@ -49,6 +51,8 @@ function App() {
           <Route path="/cat/:id" exact={true} element={<Listing/>}/>
           <Route path="/product/:id" exact={true} element={<ProductDetails/>}/>
           <Route path="/cart/" exact={true} element={<Cart/>}/>
+          <Route path="/signin/" exact={true} element={<SignIn/>}/>
+          <Route path="/signup/" exact={true} element={<SignUp/>}/>
      </Routes>
     <Footer/>
         {

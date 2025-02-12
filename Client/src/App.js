@@ -17,7 +17,7 @@ function App() {
   const [isOpenProductModal, setIsOpenProductModal]= useState(false);
   const [countryList,setCountryList] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState("");
-  //api countriesnow.space
+  // api countriesnow.space
   // useEffect(()=>{
   //   getCountry("http://countriesnow.space/api/v0.1/countries/");
   // },[]);

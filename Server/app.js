@@ -11,8 +11,11 @@ app.options('*', cors())
 //middleware
 app.use(bodyParser.json())
 //Route
-const categoryRoutes= require('./routes/categories')
+const categoryRoutes= require('./routes/categories');
+const productRoutes = require('./routes/products');
+
 app.use(`/api/category`,categoryRoutes);
+app.use(`/api/products`,productRoutes);
 //Database
 mongoose.connect(process.env.CONNECTION_STRING, {
     useNewUrlParser: true,

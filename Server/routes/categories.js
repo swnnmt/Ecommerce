@@ -1,19 +1,22 @@
 const { Category } = require('../models/category');
 const express = require('express');
+const router = express.Router();
 // const app = express();
 
 // app.use(express.json()); // Giúp server parse JSON
 // app.use(express.urlencoded({ extended: true })); // Hỗ trợ dữ liệu form
 
-const router = express.Router();
+
 const pLimit = require('p-limit');
 const cloudinary = require('cloudinary').v2
-
 cloudinary.config({
     cloud_name: process.env.cloudinary_Config_Cloud_Name,
     api_key: process.env.cloudinary_Config_api_key,
     api_secret: process.env.cloudinary_Config_api_secret,
 });
+
+
+
 //get all
 router.get(`/`, async (req, res) => {
     const categoryList = await Category.find();
@@ -24,7 +27,9 @@ router.get(`/`, async (req, res) => {
     }
     res.send(categoryList);
 });
-//get id
+// get all end
+
+//get id start
 router.get('/:id', async (req, res) => {
     const category = await Category.findById(req.params.id);
 
@@ -33,11 +38,13 @@ router.get('/:id', async (req, res) => {
     }
     return res.status(200).send(category);
 })
-// delete
-router.delete(`/:id`, async (req, res) => {
-    const deletedUser = await Category.findByIdAndDelete(req.params.id);
+// get id end
 
-    if (!deletedUser) {
+// delete start
+router.delete(`/:id`, async (req, res) => {
+    const deletedCategory = await Category.findByIdAndDelete(req.params.id);
+
+    if (!deletedCategory) {
         res.status(404).json({
             message: 'category not found',
             success: false
@@ -48,9 +55,12 @@ router.delete(`/:id`, async (req, res) => {
         message: 'Category Deleted!'
     })
 })
+// delete end
 
-// create 
+
+// create start
 router.post('/create', async (req, res) => {
+
     const limit = pLimit(2);
     const imagesToUpLoad = req.body.images.map((image) => {
         return limit(async () => {
@@ -71,6 +81,7 @@ router.post('/create', async (req, res) => {
         })
     }
 
+
     let category = new Category({
         name: req.body.name,
         images: imgurl,
@@ -88,7 +99,9 @@ router.post('/create', async (req, res) => {
 
 
 })
-//update
+// create end
+
+//update start
 router.put('/:id', async (req, res) => {
     const limit = pLimit(2);
     const imagesToUpLoad = req.body.images.map((image) => {
@@ -127,5 +140,5 @@ router.put('/:id', async (req, res) => {
     }
     res.send(category);
 })
-
+//update end
 module.exports = router;
